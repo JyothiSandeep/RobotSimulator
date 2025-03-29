@@ -92,6 +92,18 @@ namespace Robo.Tests
 
             robo.Place(1, 0, 3);
             Assert.AreEqual("1,0,WEST", robo.Report());
+
+            robo.Place(1, 2, 1);
+            robo.Move();
+            robo.Move();
+            robo.TurnLeft();
+            robo.Move();
+            Assert.AreEqual("3,3,NORTH", robo.Report());
+
+            robo.Place(0, 0, 0);
+            robo.TurnLeft();
+            Assert.AreEqual("0,0,WEST", robo.Report());
+
         }
 
 
